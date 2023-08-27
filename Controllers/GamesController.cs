@@ -38,7 +38,6 @@ namespace VideoGameManager.Controllers
             return game;
         }
 
-
         [HttpPost]
         public async Task<ActionResult<Game>> AddGame([FromBody] Game game)
         {
