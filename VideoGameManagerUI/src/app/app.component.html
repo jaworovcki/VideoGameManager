@@ -7,9 +7,9 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>Foo</td>
-      <td>Bar</td>
+    <tr *ngFor="let game of games">
+      <td>{{game.id}}</td>
+      <td>{{game.name}}</td>
     </tr>
   </tbody>
 </table>
