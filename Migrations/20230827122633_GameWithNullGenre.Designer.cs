@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using VideoGameManager.DataAccess;
 
@@ -11,9 +12,11 @@ using VideoGameManager.DataAccess;
 namespace VideoGameManager.Migrations
 {
     [DbContext(typeof(VideoGameDataContext))]
-    partial class VideoGameDataContextModelSnapshot : ModelSnapshot
+    [Migration("20230827122633_GameWithNullGenre")]
+    partial class GameWithNullGenre
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -23,5 +23,15 @@ namespace VideoGameManager.Controllers
                 .ToListAsync();
         }
 
+
+        [HttpPost]
+        public async Task<ActionResult<Game>> AddGame([FromBody] Game game)
+        {
+            _context.Games.Add(game);
+            await _context.SaveChangesAsync();
+
+            return game;
+
+        }
     }
 }
