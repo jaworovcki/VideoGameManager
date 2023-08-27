@@ -23,6 +23,21 @@ namespace VideoGameManager.Controllers
                 .ToListAsync();
         }
 
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Game>> GetGameById(int id)
+        {
+            var game = await _context.Games
+                .AsNoTracking()
+                .FirstOrDefaultAsync(g => g.Id == id);
+
+            if (game == null)
+            {
+                return NotFound();
+            }
+
+            return game;
+        }
+
 
         [HttpPost]
         public async Task<ActionResult<Game>> AddGame([FromBody] Game game)

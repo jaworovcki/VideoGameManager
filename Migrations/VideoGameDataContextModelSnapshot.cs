@@ -45,7 +45,7 @@ namespace VideoGameManager.Migrations
 
                     b.HasIndex("GenreId");
 
-                    b.ToTable("Games");
+                    b.ToTable("Games", (string)null);
                 });
 
             modelBuilder.Entity("VideoGameManager.DataAccess.GameGenre", b =>
@@ -63,7 +63,7 @@ namespace VideoGameManager.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("GameGenres");
+                    b.ToTable("GameGenres", (string)null);
                 });
 
             modelBuilder.Entity("VideoGameManager.DataAccess.Game", b =>
